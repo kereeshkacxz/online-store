@@ -1,2 +1,1 @@
-# online-store
-Online-Store (Vue + GO)
+# Online-Store (Vue + GO)
