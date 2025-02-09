@@ -337,14 +337,47 @@
 
 ### 7. **Покупки**
 
+#### Получить все покупки
+- **GET** `/purchases`
+- Ответ:
+  ```json
+  {
+    "data": [
+      {
+        "id": uuid,
+        "user_id": uuid,
+        "status": str
+        "items": [
+          {
+            "product_id": uuid,
+            "quantity": int,
+            "name": str,
+            "price": float
+            "image": url
+          }
+        ],
+        "total_price": float
+      },
+    ]
+  }
+  ```
+  
+#### Отменить покупку
+- **PATCH** `/purchases/cancel/{id}`
+- Ответ: 200
+
 #### Создать покупку
 - **POST** `/purchases`
 - Доступ: `user`, `manager`, `admin`
 - Тело запроса:
   ```json
   {
-    "product_id": uuid,
-    "quantity": int
+    "items": [
+      {
+        "product_id": uuid,
+        "quantity": int,
+      }
+    ]
   }
   ```
 - Ответ:
@@ -352,9 +385,17 @@
   {
     "id": uuid,
     "user_id": uuid,
-    "product_id": uuid,
-    "quantity": int,
     "status": str
+    "items": [
+      {
+        "product_id": uuid,
+        "quantity": int,
+        "name": str,
+        "price": float
+        "image": url
+      }
+    ],
+    "total_price": float
   }
   ```
 
@@ -372,6 +413,7 @@
         "quantity": int,
         "name": str,
         "price": float
+        "image": url
       }
     ],
     "total_price": float
@@ -414,8 +456,10 @@
   ```
 
 #### Удалить товар из корзины
-- **DELETE** `/cart/{product_id}`
+- **DELETE** `/cart`
 - Доступ: `user`, `manager`, `admin`
+- Тело запроса:
+  ```json
 - Ответ:
   ```json
   {
