@@ -1,0 +1,99 @@
+@font-face {
+  font-family: "GT Eesti Pro Display";
+  src: url("~assets/fonts/gteestiprodisplay_thin.ttf") format("truetype");
+  font-weight: 100; /* Thin */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GT Eesti Pro Display";
+  src: url("~assets/fonts/gteestiprodisplay_light.ttf") format("truetype");
+  font-weight: 300; /* Light */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GT Eesti Pro Display";
+  src: url("~assets/fonts/gteestiprodisplay_regular.ttf") format("truetype");
+  font-weight: 400; /* Regular */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GT Eesti Pro Display";
+  src: url("~assets/fonts/gteestiprodisplay_medium.ttf") format("truetype");
+  font-weight: 500; /* Medium */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GT Eesti Pro Display";
+  src: url("~assets/fonts/gteestiprodisplay_bold.ttf") format("truetype");
+  font-weight: 700; /* Bold */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GT Eesti Pro Display";
+  src: url("~assets/fonts/gteestiprodisplay_ultrabold.ttf") format("truetype");
+  font-weight: 900; /* Ultrabold */
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  --main-color: #00a9ed;
+  --text-color: #070707;
+
+  --bg-color: #f5f5f5;
+
+  --red-color: #e93131;
+  --green-color: #00ff44;
+  --gray-color: #333;
+  --font-size: 20px;
+
+  --success-color: #46af51;
+  --unsuccess-color: #e84646;
+  --header-height: 80px;
+  --padding-content-height: 50px;
+  --padding-content-width: 100px;
+  --padding-content-width-small: 20px;
+  color: var(--text-color);
+
+  line-height: 18px;
+  font-family: "GT Eesti Pro Display", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 350;
+  font-style: normal;
+  font-size: var(--font-size);
+}
+
+.fc {
+  font-family: "Comfortaa";
+}
+.fa {
+  font-family: "Anton";
+}
+h1 {
+  font-weight: 500;
+  font-size: 24px;
+}
+h2 {
+  font-weight: 500;
+  font-size: 20px;
+}
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-corner {
+  background-color: var(--second-color);
+}
+::-webkit-scrollbar-thumb {
+  overflow-x: none;
+  background-color: var(--main-color);
+}
