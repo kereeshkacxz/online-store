@@ -2,7 +2,9 @@
   <div class="header_wrapper">
     <div class="header">
       <NuxtLink class="text_logo" to="/">STORE</NuxtLink>
-      <div class="catalog_button">Каталог</div>
+      <div class="catalog_button">
+        <p class="catalog_button_title">Каталог</p>
+      </div>
       <div class="search_field">
         <input
           placeholder="Искать..."
@@ -49,10 +51,10 @@ function searchFunc() {
 .header {
   width: 100%;
   padding: 20px 40px;
-  background-color: #ffffff;
+  background-color: var(--bg-object-color);
   border-bottom-left-radius: 50px;
   border-bottom-right-radius: 50px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 10px var(--bg-shadow-color);
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -74,7 +76,6 @@ function searchFunc() {
 }
 
 .catalog_button {
-  color: white;
   background-color: var(--main-color);
   height: 50px;
   padding: 0px 25px;
@@ -86,6 +87,10 @@ function searchFunc() {
   transition: all 0.3s;
   cursor: pointer;
 }
+.catalog_button_title {
+  color: var(--text-color-reverse);
+  line-height: 8px;
+}
 .catalog_button:hover {
   background-color: #0187bd;
 }
@@ -95,22 +100,24 @@ function searchFunc() {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
   padding: 0px 20px;
   height: 50px;
   border-radius: 50px;
   transition: border 0.3s;
-  border: 2px solid white;
+  box-shadow: 0 0 10px var(--bg-shadow-color);
+  border: 2px solid var(--bg-object-color);
   flex: 1;
 }
 .search_field:focus-within {
   border: 2px solid var(--main-color);
 }
+
 .search_input {
   width: 100%;
   padding: 5px;
   border: none;
   outline: none;
+  background-color: var(--bg-object-color);
 }
 .search_input::placeholder {
   color: var(--main-color);
@@ -161,6 +168,15 @@ function searchFunc() {
   .header_wrapper {
     padding-left: 30px;
     padding-right: 30px;
+  }
+}
+[data-theme="dark"] {
+  .search_field {
+    background-color: #373737;
+    box-shadow: none;
+  }
+  .search_input {
+    background-color: #373737;
   }
 }
 </style>

@@ -1,4 +1,5 @@
 <template>
+  <Theme />
   <Notification>
     <div class="fwh main_div">
       <Header />
@@ -12,8 +13,7 @@
 <script setup>
 import Notification from "./notification.vue";
 import Header from "./header.vue";
-
-
+import Theme from "./theme.vue";
 </script>
 
 <style scoped>
@@ -23,7 +23,7 @@ import Header from "./header.vue";
   min-height: 100vh;
 }
 .content {
-  padding: var(--padding-content-height) var(--padding-content-width);
+  padding: 30px 100px;
   width: 100%;
 
   display: flex;
@@ -32,9 +32,9 @@ import Header from "./header.vue";
   text-align: center;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1000px) {
   .content {
-    padding: var(--padding-content-height) var(--padding-content-width-small);
+    padding: 30px 30px;
   }
 }
 </style>
